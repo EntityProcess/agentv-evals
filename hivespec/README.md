@@ -39,5 +39,5 @@ agentv studio hivespec/runs/2026-03-29T01-42-57-395Z/index.jsonl
 
 ```bash
 cd agentv
-bun apps/cli/src/cli.ts eval run --target pi-cli --workers 1 "evals/hivespec/*.eval.yaml"
+agentv eval run --target pi-cli --workers 1 "evals/hivespec/*.eval.yaml"
 ```

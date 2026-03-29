@@ -1,6 +1,6 @@
 # hivespec-evals
 
-Evaluation result artifacts for [AgentV](https://github.com/EntityProcess/agentv) plugins. Each directory contains results from a specific plugin's eval suite, including console logs, JSONL indexes, grading details, and timing data.
+Evaluation result artifacts for [HiveSpec](https://github.com/EntityProcess/hivespec), tested with [AgentV](https://github.com/EntityProcess/agentv). Each run directory contains JSONL indexes, per-test grading, timing, and response artifacts in the standard AgentV output format.
 
 ## Plugins
 
@@ -14,5 +14,5 @@ Results can be reproduced by running the eval suite in the agentv repo:
 
 ```bash
 cd agentv
-bun apps/cli/src/cli.ts eval run --target <target> evals/<plugin>/<eval>.eval.yaml
+agentv eval run --target <target> "evals/hivespec/*.eval.yaml"
 ```
