@@ -1,9 +1,9 @@
-# autopilot-dev Plugin Eval Results
+# hivespec Plugin Eval Results
 
 **Date:** 2026-03-29
 **PR:** [EntityProcess/agentv#824](https://github.com/EntityProcess/agentv/pull/824)
 **Issue:** [EntityProcess/agentv#823](https://github.com/EntityProcess/agentv/issues/823)
-**Plugin:** `plugins/autopilot-dev/` — phase-based delivery lifecycle (claim → explore → design → plan → implement → verify → ship)
+**Plugin:** `plugins/hivespec/` — phase-based delivery lifecycle (claim → explore → design → plan → implement → verify → ship)
 **Commit:** `390ba7b6` (feat/823-agentic-workflows-plugin)
 
 ## Results
@@ -16,11 +16,11 @@ First 4 tests passed perfectly (1.000). Remaining 13 failed with `SessionStart` 
 
 | Eval | Pass/Total | Details |
 |---|---|---|
-| ap-claim | 3/3 | All pass |
-| ap-explore | 3/3 | All pass |
-| ap-design | 1/3 | writes-spec passes; refuses-implementation and proposes-approaches partial |
-| ap-ship | 1/4 | risk-classification passes; others partial |
-| ap-verify | 2/4 | checks-blast-radius and rejects-claims pass; others partial |
+| hs-claim | 3/3 | All pass |
+| hs-explore | 3/3 | All pass |
+| hs-design | 1/3 | writes-spec passes; refuses-implementation and proposes-approaches partial |
+| hs-ship | 1/4 | risk-classification passes; others partial |
+| hs-verify | 2/4 | checks-blast-radius and rejects-claims pass; others partial |
 
 ## Runs
 
@@ -32,12 +32,12 @@ First 4 tests passed perfectly (1.000). Remaining 13 failed with `SessionStart` 
 ## Viewing Results
 
 ```bash
-agentv studio autopilot-dev/runs/2026-03-29T01-42-57-395Z/index.jsonl
+agentv studio hivespec/runs/2026-03-29T01-42-57-395Z/index.jsonl
 ```
 
 ## Reproduction
 
 ```bash
 cd agentv
-bun apps/cli/src/cli.ts eval run --target pi-cli --workers 1 "evals/autopilot-dev/*.eval.yaml"
+bun apps/cli/src/cli.ts eval run --target pi-cli --workers 1 "evals/hivespec/*.eval.yaml"
 ```

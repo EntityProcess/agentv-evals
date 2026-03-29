@@ -1,4 +1,4 @@
-# agentv-evals
+# hivespec-evals
 
 Evaluation result artifacts for [AgentV](https://github.com/EntityProcess/agentv) plugins. Each directory contains results from a specific plugin's eval suite, including console logs, JSONL indexes, grading details, and timing data.
 
@@ -6,7 +6,7 @@ Evaluation result artifacts for [AgentV](https://github.com/EntityProcess/agentv
 
 | Plugin | Status | Results |
 |---|---|---|
-| [autopilot-dev](./autopilot-dev/) | PR [#824](https://github.com/EntityProcess/agentv/pull/824) | 17/17 Claude CLI, 9/17 Pi CLI |
+| [hivespec](./hivespec/) | PR [#824](https://github.com/EntityProcess/agentv/pull/824) | 17/17 Claude CLI, 9/17 Pi CLI |
 
 ## Reproduction
 
