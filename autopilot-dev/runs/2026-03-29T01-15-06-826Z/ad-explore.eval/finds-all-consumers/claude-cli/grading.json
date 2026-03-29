@@ -1,0 +1,77 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Finds formatTask usage in src/cli/index.ts",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies usage in `src/cli/index.ts` on line 10."
+    },
+    {
+      "text": "[rubric-2] Finds formatTask usage in src/api/index.ts",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies usage in `src/api/index.ts` on line 15."
+    },
+    {
+      "text": "[rubric-3] Finds formatTask usage in src/reports/summary.ts",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies usage in `src/reports/summary.ts` on line 9."
+    },
+    {
+      "text": "[rubric-4] Lists all 3 consumers in the exploration summary",
+      "passed": true,
+      "evidence": "The candidate lists all three required consumers (CLI, API, and Summary reports), and even identifies a fourth (Task Service)."
+    },
+    {
+      "text": "[rubric-5] Notes that changes to formatTask signature affect all 3 files",
+      "passed": true,
+      "evidence": "The candidate provides a detailed impact analysis, specifically noting how a signature change would affect the different call sites (point-free vs. direct calls) across the identified files."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Finds formatTask usage in src/cli/index.ts",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies usage in `src/cli/index.ts` on line 10."
+        },
+        {
+          "text": "[rubric-2] Finds formatTask usage in src/api/index.ts",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies usage in `src/api/index.ts` on line 15."
+        },
+        {
+          "text": "[rubric-3] Finds formatTask usage in src/reports/summary.ts",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies usage in `src/reports/summary.ts` on line 9."
+        },
+        {
+          "text": "[rubric-4] Lists all 3 consumers in the exploration summary",
+          "passed": true,
+          "evidence": "The candidate lists all three required consumers (CLI, API, and Summary reports), and even identifies a fourth (Task Service)."
+        },
+        {
+          "text": "[rubric-5] Notes that changes to formatTask signature affect all 3 files",
+          "passed": true,
+          "evidence": "The candidate provides a detailed impact analysis, specifically noting how a signature change would affect the different call sites (point-free vs. direct calls) across the identified files."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Classifies this as a trivial change (docs-only, single line)",
+      "passed": true,
+      "evidence": "The answer explicitly identifies the change as a 'trivial doc-only edit' involving a single word swap."
+    },
+    {
+      "text": "[rubric-2] Recommends skipping explore, design, and plan phases",
+      "passed": true,
+      "evidence": "The answer states that 'no exploration, design, or planning phases are needed' due to the trivial nature of the change."
+    },
+    {
+      "text": "[rubric-3] Suggests going directly to implement then verify then ship",
+      "passed": true,
+      "evidence": "The answer outlines a fast path sequence moving from implement directly to verify and then ship."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Classifies this as a trivial change (docs-only, single line)",
+          "passed": true,
+          "evidence": "The answer explicitly identifies the change as a 'trivial doc-only edit' involving a single word swap."
+        },
+        {
+          "text": "[rubric-2] Recommends skipping explore, design, and plan phases",
+          "passed": true,
+          "evidence": "The answer states that 'no exploration, design, or planning phases are needed' due to the trivial nature of the change."
+        },
+        {
+          "text": "[rubric-3] Suggests going directly to implement then verify then ship",
+          "passed": true,
+          "evidence": "The answer outlines a fast path sequence moving from implement directly to verify and then ship."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..161585c\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,10 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-claim/SKILL.md\">\n+\n+@[User]:\n+I'm claiming this issue. Here is the full issue body:\n+\n+**Issue #99: Fix typo in README.md — change 'taks' to 'tasks'**\n+\n+The README.md file is in the repo root. Assess the scope of this change\n+and tell me which lifecycle phases are needed."
+  }
+}

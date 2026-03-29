@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-verify.eval.yaml",
+    "timestamp": "2026-03-29T01:16:34.790Z",
+    "targets": [
+      "claude-cli"
+    ],
+    "tests_run": [
+      "checks-blast-radius",
+      "rejects-claims-without-evidence",
+      "runs-actual-verification",
+      "tests-all-execution-modes"
+    ]
+  },
+  "run_summary": {
+    "claude-cli": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 54.489,
+        "stddev": 22.982
+      },
+      "tokens": {
+        "mean": 228629.75,
+        "stddev": 126438.248
+      },
+      "cost_usd": {
+        "mean": 0.293,
+        "stddev": 0.089
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-verify:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": []
+}

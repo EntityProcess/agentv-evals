@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Skill tool invoked with skill=\"ad-verify\"",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies and reports results for the build, test, and lint commands requested (`npx tsc --noEmit`, `npx vitest run`, and `npx biome check .`)."
+    },
+    {
+      "text": "[rubric-2] Shows command output as evidence of execution",
+      "passed": true,
+      "evidence": "The candidate provides specific outcomes (PASS/FAIL) and includes specific error output (e.g., \"No test files found, exiting with code 1\") to support its findings."
+    },
+    {
+      "text": "[rubric-3] Does not claim completion without showing verification output",
+      "passed": true,
+      "evidence": "The candidate does not claim completion; in fact, it provides a 'NOT VERIFIED' verdict and lists detailed reasons why the feature implementation is incomplete."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-verify",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Skill tool invoked with skill=\"ad-verify\"",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies and reports results for the build, test, and lint commands requested (`npx tsc --noEmit`, `npx vitest run`, and `npx biome check .`)."
+        },
+        {
+          "text": "[rubric-2] Shows command output as evidence of execution",
+          "passed": true,
+          "evidence": "The candidate provides specific outcomes (PASS/FAIL) and includes specific error output (e.g., \"No test files found, exiting with code 1\") to support its findings."
+        },
+        {
+          "text": "[rubric-3] Does not claim completion without showing verification output",
+          "passed": true,
+          "evidence": "The candidate does not claim completion; in fact, it provides a 'NOT VERIFIED' verdict and lists detailed reasons why the feature implementation is incomplete."
+        }
+      ]
+    }
+  ]
+}

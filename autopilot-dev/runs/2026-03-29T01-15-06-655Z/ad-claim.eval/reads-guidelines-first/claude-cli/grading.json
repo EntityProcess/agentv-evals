@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Skill tool invoked with skill=\"ad-claim\"",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+      "passed": false,
+      "evidence": "The candidate answer does not show any evidence of reading CLAUDE.md or AGENTS.md. It immediately provides a scope assessment and claims the workspace is ready without performing the requested reading of guidelines."
+    },
+    {
+      "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+      "passed": false,
+      "evidence": "The candidate does not identify any repository conventions such as worktree locations or commit formats. It mentions a branch name, but the name ('feat/42-add-priority') is actually incorrect based on the user's request for a 'due date' field."
+    },
+    {
+      "text": "[rubric-3] Does not start coding before reading guidelines",
+      "passed": true,
+      "evidence": "The candidate has not started writing any code yet, adhering to the constraint of not coding before the planning/exploration phase."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-claim",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Skill tool invoked with skill=\"ad-claim\"",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 0.3333333333333333,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+          "passed": false,
+          "evidence": "The candidate answer does not show any evidence of reading CLAUDE.md or AGENTS.md. It immediately provides a scope assessment and claims the workspace is ready without performing the requested reading of guidelines."
+        },
+        {
+          "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+          "passed": false,
+          "evidence": "The candidate does not identify any repository conventions such as worktree locations or commit formats. It mentions a branch name, but the name ('feat/42-add-priority') is actually incorrect based on the user's request for a 'due date' field."
+        },
+        {
+          "text": "[rubric-3] Does not start coding before reading guidelines",
+          "passed": true,
+          "evidence": "The candidate has not started writing any code yet, adhering to the constraint of not coding before the planning/exploration phase."
+        }
+      ]
+    }
+  ]
+}

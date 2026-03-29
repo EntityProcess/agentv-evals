@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-explore.eval.yaml",
+    "timestamp": "2026-03-29T01:16:52.120Z",
+    "targets": [
+      "claude-cli"
+    ],
+    "tests_run": [
+      "discovers-existing-implementation",
+      "finds-all-consumers",
+      "structured-summary"
+    ]
+  },
+  "run_summary": {
+    "claude-cli": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 56.891,
+        "stddev": 29.175
+      },
+      "tokens": {
+        "mean": 236342.667,
+        "stddev": 153991.279
+      },
+      "cost_usd": {
+        "mean": 0.27,
+        "stddev": 0.09
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-explore:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "contains-derivePriority:contains": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": []
+}

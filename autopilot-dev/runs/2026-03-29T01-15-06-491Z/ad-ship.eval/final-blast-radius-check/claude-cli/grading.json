@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Recommends searching for all consumers of Task or formatTask across the codebase",
+      "passed": true,
+      "evidence": "The answer recommends using grep to search for all consumers of the 'Task' interface and 'formatTask' utility across the codebase."
+    },
+    {
+      "text": "[rubric-2] Identifies that consumers in cli, api, and reports may be affected",
+      "passed": false,
+      "evidence": "The answer identifies CLI and API as affected entry points, but fails to identify 'reports' as a consumer, which is explicitly required by the rubric."
+    },
+    {
+      "text": "[rubric-3] Recommends verifying all consumers are updated before marking ready",
+      "passed": true,
+      "evidence": "The answer explicitly states that any consumer file not touched in the PR is a potential miss and that gaps should be investigated before marking the PR ready."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3,
+    "pass_rate": 0.667
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 0.6666666666666666,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "[rubric-1] Recommends searching for all consumers of Task or formatTask across the codebase",
+          "passed": true,
+          "evidence": "The answer recommends using grep to search for all consumers of the 'Task' interface and 'formatTask' utility across the codebase."
+        },
+        {
+          "text": "[rubric-2] Identifies that consumers in cli, api, and reports may be affected",
+          "passed": false,
+          "evidence": "The answer identifies CLI and API as affected entry points, but fails to identify 'reports' as a consumer, which is explicitly required by the rubric."
+        },
+        {
+          "text": "[rubric-3] Recommends verifying all consumers are updated before marking ready",
+          "passed": true,
+          "evidence": "The answer explicitly states that any consumer file not touched in the PR is a potential miss and that gaps should be investigated before marking the PR ready."
+        }
+      ]
+    }
+  ]
+}

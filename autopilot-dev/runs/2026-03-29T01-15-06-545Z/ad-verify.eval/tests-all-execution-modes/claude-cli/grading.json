@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Identifies CLI (src/cli/index.ts) and API (src/api/index.ts) as separate entry points",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies the CLI and API as the entry points for verification, noting that neither accepts or returns the priority field."
+    },
+    {
+      "text": "[rubric-2] Tests or verifies the feature through both entry points",
+      "passed": true,
+      "evidence": "The candidate verifies the status of the feature across both entry points, concluding that the feature is non-existent/unimplemented in both interfaces."
+    },
+    {
+      "text": "[rubric-3] Does not claim verification is complete after testing only one mode",
+      "passed": true,
+      "evidence": "The candidate does not claim the feature works after only checking one mode; instead, it provides a comprehensive assessment that includes both entry points, the model layer, and the git branch state."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Identifies CLI (src/cli/index.ts) and API (src/api/index.ts) as separate entry points",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies the CLI and API as the entry points for verification, noting that neither accepts or returns the priority field."
+        },
+        {
+          "text": "[rubric-2] Tests or verifies the feature through both entry points",
+          "passed": true,
+          "evidence": "The candidate verifies the status of the feature across both entry points, concluding that the feature is non-existent/unimplemented in both interfaces."
+        },
+        {
+          "text": "[rubric-3] Does not claim verification is complete after testing only one mode",
+          "passed": true,
+          "evidence": "The candidate does not claim the feature works after only checking one mode; instead, it provides a comprehensive assessment that includes both entry points, the model layer, and the git branch state."
+        }
+      ]
+    }
+  ]
+}

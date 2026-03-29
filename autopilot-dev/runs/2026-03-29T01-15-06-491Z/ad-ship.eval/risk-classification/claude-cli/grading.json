@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Classifies this as elevated risk due to breaking interface or API changes",
+      "passed": true,
+      "evidence": "The response explicitly identifies 'Breaking API changes' as an elevated-risk category for this PR."
+    },
+    {
+      "text": "[rubric-2] Recommends review or explicit confirmation before merging",
+      "passed": true,
+      "evidence": "The response clearly states 'Do not auto-merge' and 'You should get review first.'"
+    },
+    {
+      "text": "[rubric-3] Explains why breaking changes are elevated risk",
+      "passed": true,
+      "evidence": "The response explains that the change is breaking because 'any existing consumer that creates/updates tasks without it will break' due to the field being required."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Classifies this as elevated risk due to breaking interface or API changes",
+          "passed": true,
+          "evidence": "The response explicitly identifies 'Breaking API changes' as an elevated-risk category for this PR."
+        },
+        {
+          "text": "[rubric-2] Recommends review or explicit confirmation before merging",
+          "passed": true,
+          "evidence": "The response clearly states 'Do not auto-merge' and 'You should get review first.'"
+        },
+        {
+          "text": "[rubric-3] Explains why breaking changes are elevated risk",
+          "passed": true,
+          "evidence": "The response explains that the change is breaking because 'any existing consumer that creates/updates tasks without it will break' due to the field being required."
+        }
+      ]
+    }
+  ]
+}

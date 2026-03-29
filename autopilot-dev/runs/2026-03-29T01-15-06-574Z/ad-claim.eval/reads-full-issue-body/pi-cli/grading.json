@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Extracts the objective (add dueDate field)",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies the objective as adding an optional `dueDate` property to the `Task` interface."
+    },
+    {
+      "text": "[rubric-2] Identifies acceptance signals (filter by due date, backward compatibility)",
+      "passed": true,
+      "evidence": "The candidate correctly identifies both acceptance signals: filtering by due date and backward compatibility for existing tasks."
+    },
+    {
+      "text": "[rubric-3] Identifies non-goals (no calendar UI, no recurring tasks)",
+      "passed": true,
+      "evidence": "The candidate clearly lists the non-goals: no calendar UI and no recurring tasks."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Extracts the objective (add dueDate field)",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies the objective as adding an optional `dueDate` property to the `Task` interface."
+        },
+        {
+          "text": "[rubric-2] Identifies acceptance signals (filter by due date, backward compatibility)",
+          "passed": true,
+          "evidence": "The candidate correctly identifies both acceptance signals: filtering by due date and backward compatibility for existing tasks."
+        },
+        {
+          "text": "[rubric-3] Identifies non-goals (no calendar UI, no recurring tasks)",
+          "passed": true,
+          "evidence": "The candidate clearly lists the non-goals: no calendar UI and no recurring tasks."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..e83e220\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,12 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-claim/SKILL.md\">\n+\n+@[User]:\n+I'm claiming this issue. Here is the full issue body — no need to fetch from GitHub:\n+\n+**Issue #42: Add due date field to tasks**\n+Objective: Add an optional dueDate field to the Task interface.\n+Acceptance: Tasks can be filtered by due date. Existing tasks without due dates still work.\n+Non-goals: No calendar UI, no recurring tasks.\n+\n+Extract the key details from this issue and tell me what you understand."
+  }
+}

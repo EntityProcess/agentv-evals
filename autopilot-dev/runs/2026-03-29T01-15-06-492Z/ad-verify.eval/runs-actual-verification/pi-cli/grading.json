@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Skill \"ad-verify\" not found in 8 tool call(s)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+      "passed": true,
+      "evidence": "The agent clearly states the results of running 'bun run build', 'bun run test', and 'bun run lint', indicating that it attempted to execute the requested commands."
+    },
+    {
+      "text": "[rubric-2] Shows command output as evidence of execution",
+      "passed": true,
+      "evidence": "The agent provides specific evidence of execution by detailing the exact failure reasons (e.g., vitest exit code 1, lack of test files) and listing specific files affected by linting issues (e.g., src/utils/format-task.ts). It also references the 'output above', which in an agentic context refers to the tool output blocks displayed during the session."
+    },
+    {
+      "text": "[rubric-3] Does not claim completion without showing verification output",
+      "passed": true,
+      "evidence": "The agent does not claim completion. Instead, it marks the status as 'blocked' and explicitly lists which commands failed."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-verify",
+      "type": "skill-trigger",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "Skill \"ad-verify\" not found in 8 tool call(s)",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Runs or attempts to run build, test, or lint commands",
+          "passed": true,
+          "evidence": "The agent clearly states the results of running 'bun run build', 'bun run test', and 'bun run lint', indicating that it attempted to execute the requested commands."
+        },
+        {
+          "text": "[rubric-2] Shows command output as evidence of execution",
+          "passed": true,
+          "evidence": "The agent provides specific evidence of execution by detailing the exact failure reasons (e.g., vitest exit code 1, lack of test files) and listing specific files affected by linting issues (e.g., src/utils/format-task.ts). It also references the 'output above', which in an agentic context refers to the tool output blocks displayed during the session."
+        },
+        {
+          "text": "[rubric-3] Does not claim completion without showing verification output",
+          "passed": true,
+          "evidence": "The agent does not claim completion. Instead, it marks the status as 'blocked' and explicitly lists which commands failed."
+        }
+      ]
+    }
+  ]
+}

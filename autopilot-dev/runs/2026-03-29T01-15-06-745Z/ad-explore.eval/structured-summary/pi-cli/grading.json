@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Includes a \"what exists\" section identifying current code",
+      "passed": true,
+      "evidence": "The summary contains a detailed 'What Exists' section that identifies the current state of models, services, utilities, and entry points in the codebase."
+    },
+    {
+      "text": "[rubric-2] Includes a \"what needs to change\" section",
+      "passed": true,
+      "evidence": "The 'What Likely Needs to Change' section outlines the specific modifications required across various layers of the application."
+    },
+    {
+      "text": "[rubric-3] Lists all consumers of affected interfaces",
+      "passed": true,
+      "evidence": "The 'Consumers / Impacted Areas' section identifies the downstream consumers of the Task interface and the formatTask utility, such as the CLI, API, and reports."
+    },
+    {
+      "text": "[rubric-4] Identifies risks (backward compatibility, multiple entry points)",
+      "passed": true,
+      "evidence": "Risks are clearly identified, including the impact of shared utility changes across multiple entry points and the need for backward compatibility/migration for existing tasks."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Includes a \"what exists\" section identifying current code",
+          "passed": true,
+          "evidence": "The summary contains a detailed 'What Exists' section that identifies the current state of models, services, utilities, and entry points in the codebase."
+        },
+        {
+          "text": "[rubric-2] Includes a \"what needs to change\" section",
+          "passed": true,
+          "evidence": "The 'What Likely Needs to Change' section outlines the specific modifications required across various layers of the application."
+        },
+        {
+          "text": "[rubric-3] Lists all consumers of affected interfaces",
+          "passed": true,
+          "evidence": "The 'Consumers / Impacted Areas' section identifies the downstream consumers of the Task interface and the formatTask utility, such as the CLI, API, and reports."
+        },
+        {
+          "text": "[rubric-4] Identifies risks (backward compatibility, multiple entry points)",
+          "passed": true,
+          "evidence": "Risks are clearly identified, including the impact of shared utility changes across multiple entry points and the need for backward compatibility/migration for existing tasks."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..76715d2\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,2 @@\n+Explore the codebase for issue #50: \"Add priority field to tasks with custom rules\".\n+Produce a structured exploration summary.\n\\ No newline at end of file"
+  }
+}

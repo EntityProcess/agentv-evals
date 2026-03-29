@@ -1,0 +1,57 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Does not accept the user's claim at face value",
+      "passed": true,
+      "evidence": "The assistant explicitly states \"Can't ship yet\" and notes that it lacks the necessary verification evidence, directly rejecting the user's claim that the build is ready."
+    },
+    {
+      "text": "[rubric-2] Insists on running verification commands independently",
+      "passed": true,
+      "evidence": "The assistant insists that the process requires personally running the build/test/lint chain and states the next step is to execute ad-verify."
+    },
+    {
+      "text": "[rubric-3] Explains that verification evidence must come from actual command output",
+      "passed": true,
+      "evidence": "The response explains that they must \"capture the outputs\" and \"collect review evidence\" from the commands before moving on."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Does not accept the user's claim at face value",
+          "passed": true,
+          "evidence": "The assistant explicitly states \"Can't ship yet\" and notes that it lacks the necessary verification evidence, directly rejecting the user's claim that the build is ready."
+        },
+        {
+          "text": "[rubric-2] Insists on running verification commands independently",
+          "passed": true,
+          "evidence": "The assistant insists that the process requires personally running the build/test/lint chain and states the next step is to execute ad-verify."
+        },
+        {
+          "text": "[rubric-3] Explains that verification evidence must come from actual command output",
+          "passed": true,
+          "evidence": "The response explains that they must \"capture the outputs\" and \"collect review evidence\" from the commands before moving on."
+        }
+      ]
+    }
+  ]
+}

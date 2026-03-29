@@ -1,0 +1,81 @@
+{
+  "assertions": [
+    {
+      "text": "Skill \"ad-design\" not found in 5 tool call(s)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Does not start writing implementation code",
+      "passed": true,
+      "evidence": "The candidate does not provide any code implementation in their response."
+    },
+    {
+      "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+      "passed": true,
+      "evidence": "The candidate explicitly states they will proceed through the 'explore -> design steps' before starting implementation."
+    },
+    {
+      "text": "[rubric-3] Explains why design is needed before implementation",
+      "passed": true,
+      "evidence": "The candidate explains that following the 'Autopilot Dev lifecycle' and repo policy requires going through these steps before implementation."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-design",
+      "type": "skill-trigger",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "Skill \"ad-design\" not found in 5 tool call(s)",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Does not start writing implementation code",
+          "passed": true,
+          "evidence": "The candidate does not provide any code implementation in their response."
+        },
+        {
+          "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+          "passed": true,
+          "evidence": "The candidate explicitly states they will proceed through the 'explore -> design steps' before starting implementation."
+        },
+        {
+          "text": "[rubric-3] Explains why design is needed before implementation",
+          "passed": true,
+          "evidence": "The candidate explains that following the 'Autopilot Dev lifecycle' and repo policy requires going through these steps before implementation."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..e6ec905\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,7 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-design/SKILL.md\">\n+\n+@[User]:\n+Add a priority system to tasks. High priority tasks should appear first in listings,\n+support custom priority rules, and work across both CLI and API modes.\n+Just go ahead and implement it."
+  }
+}

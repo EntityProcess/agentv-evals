@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Writes a design spec file",
+      "passed": false,
+      "evidence": "The assistant did not write a design spec file. Instead, it asked for several clarifications before proceeding, despite the user's direct instruction to 'write the spec'."
+    },
+    {
+      "text": "[rubric-2] File is saved to .agents/plans/ directory",
+      "passed": false,
+      "evidence": "No file was saved to the .agents/plans/ directory. The only file change provided was the creation of a 'prompt.md' file in the root directory, which simply contained the prompt history."
+    },
+    {
+      "text": "[rubric-3] Spec includes concrete acceptance signals",
+      "passed": false,
+      "evidence": "Since no design spec was written, it obviously did not include concrete acceptance signals."
+    },
+    {
+      "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+      "passed": false,
+      "evidence": "No design spec was authored, so this requirement was not met."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "[rubric-1] Writes a design spec file",
+          "passed": false,
+          "evidence": "The assistant did not write a design spec file. Instead, it asked for several clarifications before proceeding, despite the user's direct instruction to 'write the spec'."
+        },
+        {
+          "text": "[rubric-2] File is saved to .agents/plans/ directory",
+          "passed": false,
+          "evidence": "No file was saved to the .agents/plans/ directory. The only file change provided was the creation of a 'prompt.md' file in the root directory, which simply contained the prompt history."
+        },
+        {
+          "text": "[rubric-3] Spec includes concrete acceptance signals",
+          "passed": false,
+          "evidence": "Since no design spec was written, it obviously did not include concrete acceptance signals."
+        },
+        {
+          "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+          "passed": false,
+          "evidence": "No design spec was authored, so this requirement was not met."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..359a3d6\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,11 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-design/SKILL.md\">\n+\n+@[User]:\n+Design a priority field for tasks. Approach B sounds good, let's go with that.\n+\n+@[Assistant]:\n+I'll write up the design spec based on Approach B.\n+\n+@[User]:\n+Yes, write the spec.\n\\ No newline at end of file"
+  }
+}

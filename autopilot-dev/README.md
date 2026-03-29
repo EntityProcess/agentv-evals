@@ -4,23 +4,34 @@
 **PR:** [EntityProcess/agentv#824](https://github.com/EntityProcess/agentv/pull/824)
 **Issue:** [EntityProcess/agentv#823](https://github.com/EntityProcess/agentv/issues/823)
 **Plugin:** `plugins/autopilot-dev/` — phase-based delivery lifecycle (claim → explore → design → plan → implement → verify → ship)
+**Commit:** `649ffc60` (feat/823-agentic-workflows-plugin branch)
 
-## Final Results
+## Results
 
 | Eval | Tests | Claude CLI | Pi CLI |
 |---|---|---|---|
 | ad-explore | 3 | **3/3 PASS (1.000)** | **3/3 PASS (1.000)** |
-| ad-verify | 4 | **4/4 PASS (1.000)** | 3/4 (0.833) |
-| ad-design | 3 | **3/3 PASS (1.000)** | 0/3 (0.417) |
-| ad-claim | 3 | **3/3 PASS (1.000)** | 2/3 (0.833) |
-| ad-ship | 4 | **4/4 PASS (1.000)** | 1/4 (0.708) |
-| **Total** | **17** | **17/17 PASS** | **9/17 pass** |
+| ad-verify | 4 | **4/4 PASS (1.000)** | 1/4 (0.729) |
+| ad-design | 3 | 2/3 (0.917) | 0/3 (0.167) |
+| ad-claim | 3 | 2/3 (0.889) | **3/3 PASS (1.000)** |
+| ad-ship | 4 | 3/4 (0.917) | 1/4 (0.708) |
+| **Total** | **17** | **14/17** | **7/17** |
 
 ## Targets
 
 - **claude-cli**: Claude Code CLI v2.1.86 (claude-cli provider)
 - **pi-cli**: Pi Coding Agent CLI via OpenRouter (openai/gpt-5.1-codex)
 - **grader**: Gemini 3 Flash Preview (gemini-flash)
+
+## Viewing Results
+
+```bash
+# View in AgentV Studio
+agentv studio autopilot-dev/runs/<timestamp>/index.jsonl
+
+# Or compare runs
+agentv compare autopilot-dev/runs/<timestamp-1>/index.jsonl autopilot-dev/runs/<timestamp-2>/index.jsonl
+```
 
 ## Reproduction
 
@@ -34,18 +45,17 @@ Requires:
 - `claude` CLI installed (for claude-cli target)
 - `.agentv/targets.yaml` with claude-cli and pi-cli targets configured
 
-## Directory Structure
+## Artifact Structure
+
+Raw agentv output per run:
 
 ```
-results/
-  claude-cli/     # Console output per eval
-  pi-cli/
-artifacts/        # JSONL index, grading.json, timing.json per test
+runs/<timestamp>/
+├── index.jsonl
+├── benchmark.json
+├── timing.json
+└── <evalset>/<test-id>/<target>/
+    ├── input.md
+    ├── grading.json
+    └── timing.json
 ```
-
-## Key Findings
-
-1. **SKILL.md as file input was needed** for design/ship/verify/claim evals — workspace skill discovery alone wasn't sufficient to trigger skills reliably. Including the SKILL.md in the test input ensures the agent reads the skill discipline.
-2. **Explore evals pass without file inputs** — the workspace setup hook copies skills to `.claude/skills/`, `.agents/skills/`, `.pi/skills/` and agents discover them naturally for exploration tasks.
-3. **Ship tests must be decision-making focused** — testing actual git operations in a sandbox leads to false negatives because agents check `git diff` and find mismatches. Frame ship tests as "should I auto-merge or get review?" with change descriptions in the prompt.
-4. **Claim tests must not depend on GitHub** — provide issue bodies directly in prompts since workspace has no GitHub remote.

@@ -1,0 +1,81 @@
+{
+  "assertions": [
+    {
+      "text": "Read tool loaded skill file: .pi/skills/ad-claim/SKILL.md",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+      "passed": true,
+      "evidence": "The agent explicitly states it has read CLAUDE.md and AGENTS.md and summarizes the conventions found within them."
+    },
+    {
+      "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+      "passed": true,
+      "evidence": "The agent correctly identifies the worktree location conventions, branch naming conventions, and commit format conventions as requested."
+    },
+    {
+      "text": "[rubric-3] Does not start coding before reading guidelines",
+      "passed": true,
+      "evidence": "The agent pauses to ask for the issue number and branch name before proceeding with worktree creation or coding."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-claim",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Read tool loaded skill file: .pi/skills/ad-claim/SKILL.md",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Reads CLAUDE.md or AGENTS.md before doing other work",
+          "passed": true,
+          "evidence": "The agent explicitly states it has read CLAUDE.md and AGENTS.md and summarizes the conventions found within them."
+        },
+        {
+          "text": "[rubric-2] Identifies the repo conventions (worktree location, branch naming, commit format)",
+          "passed": true,
+          "evidence": "The agent correctly identifies the worktree location conventions, branch naming conventions, and commit format conventions as requested."
+        },
+        {
+          "text": "[rubric-3] Does not start coding before reading guidelines",
+          "passed": true,
+          "evidence": "The agent pauses to ask for the issue number and branch name before proceeding with worktree creation or coding."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..95a2ecf\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,7 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-claim/SKILL.md\">\n+\n+@[User]:\n+I want to start work on adding a due date field to tasks.\n+Read the repo guidelines and set up the workspace. No need to use GitHub —\n+the branch is already created."
+  }
+}

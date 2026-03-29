@@ -1,0 +1,67 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Greps for Task interface usage across the codebase",
+      "passed": true,
+      "evidence": "The candidate identifies specific files and line numbers where the 'Task' interface is used across the codebase, demonstrating that a search or grep for the interface was performed."
+    },
+    {
+      "text": "[rubric-2] Greps for formatTask usage across the codebase",
+      "passed": true,
+      "evidence": "The candidate provides a detailed table of consumers for the 'formatTask' function, including specific line numbers, which indicates a comprehensive search for its usage."
+    },
+    {
+      "text": "[rubric-3] Identifies all 3 consumers of formatTask (cli, api, reports)",
+      "passed": true,
+      "evidence": "The candidate identifies the CLI, API, and Reports consumers (src/cli/index.ts, src/api/index.ts, and src/reports/summary.ts), satisfying the requirement to find all three."
+    },
+    {
+      "text": "[rubric-4] Flags any consumer that was not updated as a potential regression",
+      "passed": true,
+      "evidence": "The candidate explicitly identifies 'addTask' in task-service.ts and 'TaskFilter' in task.ts as potential missed updates/regressions, providing logic for why they might be broken."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Greps for Task interface usage across the codebase",
+          "passed": true,
+          "evidence": "The candidate identifies specific files and line numbers where the 'Task' interface is used across the codebase, demonstrating that a search or grep for the interface was performed."
+        },
+        {
+          "text": "[rubric-2] Greps for formatTask usage across the codebase",
+          "passed": true,
+          "evidence": "The candidate provides a detailed table of consumers for the 'formatTask' function, including specific line numbers, which indicates a comprehensive search for its usage."
+        },
+        {
+          "text": "[rubric-3] Identifies all 3 consumers of formatTask (cli, api, reports)",
+          "passed": true,
+          "evidence": "The candidate identifies the CLI, API, and Reports consumers (src/cli/index.ts, src/api/index.ts, and src/reports/summary.ts), satisfying the requirement to find all three."
+        },
+        {
+          "text": "[rubric-4] Flags any consumer that was not updated as a potential regression",
+          "passed": true,
+          "evidence": "The candidate explicitly identifies 'addTask' in task-service.ts and 'TaskFilter' in task.ts as potential missed updates/regressions, providing logic for why they might be broken."
+        }
+      ]
+    }
+  ]
+}

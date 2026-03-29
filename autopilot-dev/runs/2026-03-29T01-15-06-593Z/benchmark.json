@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-design.eval.yaml",
+    "timestamp": "2026-03-29T01:15:51.287Z",
+    "targets": [
+      "pi-cli"
+    ],
+    "tests_run": [
+      "proposes-multiple-approaches",
+      "refuses-implementation-without-design",
+      "writes-spec-to-plans"
+    ]
+  },
+  "run_summary": {
+    "pi-cli": {
+      "pass_rate": {
+        "mean": 0.167,
+        "stddev": 0.236
+      },
+      "time_seconds": {
+        "mean": 34.047,
+        "stddev": 20.492
+      },
+      "tokens": {
+        "mean": 21857.333,
+        "stddev": 19992.728
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-design:skill-trigger": {
+      "mean": 0,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 0.333,
+      "stddev": 0.471
+    }
+  },
+  "notes": []
+}

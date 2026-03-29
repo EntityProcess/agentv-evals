@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-design.eval.yaml",
+    "timestamp": "2026-03-29T01:16:40.616Z",
+    "targets": [
+      "claude-cli"
+    ],
+    "tests_run": [
+      "proposes-multiple-approaches",
+      "refuses-implementation-without-design",
+      "writes-spec-to-plans"
+    ]
+  },
+  "run_summary": {
+    "claude-cli": {
+      "pass_rate": {
+        "mean": 0.667,
+        "stddev": 0.471
+      },
+      "time_seconds": {
+        "mean": 72.822,
+        "stddev": 14.291
+      },
+      "tokens": {
+        "mean": 105812.333,
+        "stddev": 49842.331
+      },
+      "cost_usd": {
+        "mean": 0.232,
+        "stddev": 0.053
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-design:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 0.917,
+      "stddev": 0.118
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Presents at least 2 different approaches",
+      "passed": false,
+      "evidence": "The candidate answer identifies what needs to change and key decisions, but does not present distinct approaches (e.g., Approach A vs. Approach B) for the implementation."
+    },
+    {
+      "text": "[rubric-2] Includes trade-offs for each approach (pros and cons)",
+      "passed": false,
+      "evidence": "Since no specific approaches were defined, no trade-offs (pros and cons) for different options were provided."
+    },
+    {
+      "text": "[rubric-3] Makes a recommendation with reasoning",
+      "passed": false,
+      "evidence": "The answer lists pending decisions and risks but does not recommend a specific design path or implementation strategy."
+    },
+    {
+      "text": "[rubric-4] Asks for user approval before proceeding",
+      "passed": false,
+      "evidence": "The answer ends with a list of risks and does not ask the user for approval to proceed with a specific plan."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "[rubric-1] Presents at least 2 different approaches",
+          "passed": false,
+          "evidence": "The candidate answer identifies what needs to change and key decisions, but does not present distinct approaches (e.g., Approach A vs. Approach B) for the implementation."
+        },
+        {
+          "text": "[rubric-2] Includes trade-offs for each approach (pros and cons)",
+          "passed": false,
+          "evidence": "Since no specific approaches were defined, no trade-offs (pros and cons) for different options were provided."
+        },
+        {
+          "text": "[rubric-3] Makes a recommendation with reasoning",
+          "passed": false,
+          "evidence": "The answer lists pending decisions and risks but does not recommend a specific design path or implementation strategy."
+        },
+        {
+          "text": "[rubric-4] Asks for user approval before proceeding",
+          "passed": false,
+          "evidence": "The answer ends with a list of risks and does not ask the user for approval to proceed with a specific plan."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..70b3282\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,6 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-design/SKILL.md\">\n+\n+@[User]:\n+Design a solution for adding task priorities.\n+Tasks should be sortable by priority in both CLI and API modes."
+  }
+}

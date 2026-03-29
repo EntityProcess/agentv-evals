@@ -1,0 +1,72 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Writes a design spec file",
+      "passed": true,
+      "evidence": "The agent wrote a comprehensive design spec file for the task priority field."
+    },
+    {
+      "text": "[rubric-2] File is saved to .agents/plans/ directory",
+      "passed": true,
+      "evidence": "The file is created at the path `.agents/plans/2026-03-29-task-priority-design.md`."
+    },
+    {
+      "text": "[rubric-3] Spec includes concrete acceptance signals",
+      "passed": true,
+      "evidence": "Section 7 of the design spec contains 15 concrete acceptance criteria covering the service, CLI, and API."
+    },
+    {
+      "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+      "passed": true,
+      "evidence": "The spec provides specific code signatures, file paths, and implementation logic without using placeholders or ambiguous language."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Writes a design spec file",
+          "passed": true,
+          "evidence": "The agent wrote a comprehensive design spec file for the task priority field."
+        },
+        {
+          "text": "[rubric-2] File is saved to .agents/plans/ directory",
+          "passed": true,
+          "evidence": "The file is created at the path `.agents/plans/2026-03-29-task-priority-design.md`."
+        },
+        {
+          "text": "[rubric-3] Spec includes concrete acceptance signals",
+          "passed": true,
+          "evidence": "Section 7 of the design spec contains 15 concrete acceptance criteria covering the service, CLI, and API."
+        },
+        {
+          "text": "[rubric-4] No placeholders or ambiguous language in the spec",
+          "passed": true,
+          "evidence": "The spec provides specific code signatures, file paths, and implementation logic without using placeholders or ambiguous language."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/.agents/plans/2026-03-29-task-priority-design.md b/.agents/plans/2026-03-29-task-priority-design.md\nnew file mode 100644\nindex 0000000..9d0991e\n--- /dev/null\n+++ b/.agents/plans/2026-03-29-task-priority-design.md\n@@ -0,0 +1,200 @@\n+# Design Spec: Task Priority Field\n+\n+**Date:** 2026-03-29\n+**Branch:** `feat/42-add-priority`\n+**Approach:** B — Explicit priority as a first-class field on Task\n+\n+## Context\n+\n+The current codebase has a `derivePriority` function in `src/utils/format-task.ts` that infers priority from status (`in_progress` → high, everything else → medium). This is incomplete — it never returns `'low'`, ignores user intent, and couples priority to status.\n+\n+Approach B replaces this derived heuristic with an explicit `priority` field on the Task model, set by the user at creation time and updatable independently of status.\n+\n+---\n+\n... (186 more lines)"
+  }
+}

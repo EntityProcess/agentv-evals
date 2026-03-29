@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ad-design/SKILL.md",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Does not start writing implementation code",
+      "passed": true,
+      "evidence": "The candidate does not include any implementation code in the response, adhering to the requirement to block implementation attempts."
+    },
+    {
+      "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+      "passed": true,
+      "evidence": "The candidate asks four specific clarifying questions (priority setting, levels, defaults, and sorting) and explicitly states they will not proceed with an approach proposal until these are answered."
+    },
+    {
+      "text": "[rubric-3] Explains why design is needed before implementation",
+      "passed": true,
+      "evidence": "The candidate explains the design process by categorizing the task as a 'single-session feature' and showing through the clarifying questions that there are multiple conflicting ways to implement the request (e.g., explicit vs. derived priority), thus demonstrating why design decisions are necessary before coding."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-design",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Read tool loaded skill file: /home/christso/projects/agentv.worktrees/feat-agentic-workflows/plugins/autopilot-dev/skills/ad-design/SKILL.md",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Does not start writing implementation code",
+          "passed": true,
+          "evidence": "The candidate does not include any implementation code in the response, adhering to the requirement to block implementation attempts."
+        },
+        {
+          "text": "[rubric-2] Insists on completing the design phase first or asks clarifying questions before implementing",
+          "passed": true,
+          "evidence": "The candidate asks four specific clarifying questions (priority setting, levels, defaults, and sorting) and explicitly states they will not proceed with an approach proposal until these are answered."
+        },
+        {
+          "text": "[rubric-3] Explains why design is needed before implementation",
+          "passed": true,
+          "evidence": "The candidate explains the design process by categorizing the task as a 'single-session feature' and showing through the clarifying questions that there are multiple conflicting ways to implement the request (e.g., explicit vs. derived priority), thus demonstrating why design decisions are necessary before coding."
+        }
+      ]
+    }
+  ]
+}

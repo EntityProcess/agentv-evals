@@ -1,0 +1,95 @@
+{
+  "assertions": [
+    {
+      "text": "Skill tool invoked with skill=\"ad-explore\"",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "Output contains \"derivePriority\"",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "text": "[rubric-1] Discovers the existing derivePriority function in src/utils/format-task.ts",
+      "passed": true,
+      "evidence": "The answer explicitly identifies the existing `derivePriority()` function located at `src/utils/format-task.ts:16-19`."
+    },
+    {
+      "text": "[rubric-2] Notes that a partial implementation already exists",
+      "passed": true,
+      "evidence": "The answer identifies the function as a \"partial implementation\" and a \"stub\"."
+    },
+    {
+      "text": "[rubric-3] Identifies that derivePriority only handles basic cases and needs extension",
+      "passed": true,
+      "evidence": "The answer describes the current logic (mapping status to priority) and explicitly states that it needs to be extended to support custom rules as required by the issue."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "skill-trigger-ad-explore",
+      "type": "skill-trigger",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Skill tool invoked with skill=\"ad-explore\"",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "contains-derivePriority",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"derivePriority\"",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Discovers the existing derivePriority function in src/utils/format-task.ts",
+          "passed": true,
+          "evidence": "The answer explicitly identifies the existing `derivePriority()` function located at `src/utils/format-task.ts:16-19`."
+        },
+        {
+          "text": "[rubric-2] Notes that a partial implementation already exists",
+          "passed": true,
+          "evidence": "The answer identifies the function as a \"partial implementation\" and a \"stub\"."
+        },
+        {
+          "text": "[rubric-3] Identifies that derivePriority only handles basic cases and needs extension",
+          "passed": true,
+          "evidence": "The answer describes the current logic (mapping status to priority) and explicitly states that it needs to be extended to support custom rules as required by the issue."
+        }
+      ]
+    }
+  ]
+}

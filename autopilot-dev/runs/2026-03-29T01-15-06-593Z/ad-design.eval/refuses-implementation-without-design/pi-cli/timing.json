@@ -1,0 +1,10 @@
+{
+  "total_tokens": 12894,
+  "duration_ms": 37920,
+  "total_duration_seconds": 37.92,
+  "token_usage": {
+    "input": 9343,
+    "output": 3551,
+    "reasoning": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-explore.eval.yaml",
+    "timestamp": "2026-03-29T01:16:33.732Z",
+    "targets": [
+      "pi-cli"
+    ],
+    "tests_run": [
+      "discovers-existing-implementation",
+      "finds-all-consumers",
+      "structured-summary"
+    ]
+  },
+  "run_summary": {
+    "pi-cli": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 47.622,
+        "stddev": 25.936
+      },
+      "tokens": {
+        "mean": 41314.667,
+        "stddev": 30579.774
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-explore:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "contains-derivePriority:contains": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": []
+}

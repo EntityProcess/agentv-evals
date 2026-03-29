@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv.worktrees/feat-agentic-workflows/evals/autopilot-dev/ad-claim.eval.yaml",
+    "timestamp": "2026-03-29T01:16:24.038Z",
+    "targets": [
+      "claude-cli"
+    ],
+    "tests_run": [
+      "assesses-scope",
+      "reads-full-issue-body",
+      "reads-guidelines-first"
+    ]
+  },
+  "run_summary": {
+    "claude-cli": {
+      "pass_rate": {
+        "mean": 0.833,
+        "stddev": 0.236
+      },
+      "time_seconds": {
+        "mean": 31.989,
+        "stddev": 13.26
+      },
+      "tokens": {
+        "mean": 116571,
+        "stddev": 58641.16
+      },
+      "cost_usd": {
+        "mean": 0.172,
+        "stddev": 0.069
+      }
+    }
+  },
+  "per_grader_summary": {
+    "skill-trigger-ad-claim:skill-trigger": {
+      "mean": 1,
+      "stddev": 0
+    },
+    "rubrics:llm-grader": {
+      "mean": 0.778,
+      "stddev": 0.314
+    }
+  },
+  "notes": []
+}

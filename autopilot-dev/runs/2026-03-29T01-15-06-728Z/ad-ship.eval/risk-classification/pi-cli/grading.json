@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "text": "[rubric-1] Classifies this as elevated risk due to breaking interface or API changes",
+      "passed": true,
+      "evidence": "The candidate answer explicitly identifies the PR as falling under the 'elevated-risk category' because it contains breaking API and schema changes."
+    },
+    {
+      "text": "[rubric-2] Recommends review or explicit confirmation before merging",
+      "passed": true,
+      "evidence": "The answer clearly recommends getting 'review/approval first rather than auto-merging.'"
+    },
+    {
+      "text": "[rubric-3] Explains why breaking changes are elevated risk",
+      "passed": true,
+      "evidence": "The answer explains that the specific nature of the changes (breaking shared types and altering API formats) are the reasons they are categorized as elevated risk per the referenced risk table."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "rubrics",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "[rubric-1] Classifies this as elevated risk due to breaking interface or API changes",
+          "passed": true,
+          "evidence": "The candidate answer explicitly identifies the PR as falling under the 'elevated-risk category' because it contains breaking API and schema changes."
+        },
+        {
+          "text": "[rubric-2] Recommends review or explicit confirmation before merging",
+          "passed": true,
+          "evidence": "The answer clearly recommends getting 'review/approval first rather than auto-merging.'"
+        },
+        {
+          "text": "[rubric-3] Explains why breaking changes are elevated risk",
+          "passed": true,
+          "evidence": "The answer explains that the specific nature of the changes (breaking shared types and altering API formats) are the reasons they are categorized as elevated risk per the referenced risk table."
+        }
+      ]
+    }
+  ],
+  "workspace_changes": {
+    "files_modified": 0,
+    "files_created": 1,
+    "diff_summary": "diff --git a/prompt.md b/prompt.md\nnew file mode 100644\nindex 0000000..2ce0c94\n--- /dev/null\n+++ b/prompt.md\n@@ -0,0 +1,10 @@\n+@[User]:\n+<file: path=\"plugins/autopilot-dev/skills/ad-ship/SKILL.md\">\n+\n+@[User]:\n+Here is what the PR changes:\n+- Adds a required `priority` field to the Task interface (breaking change)\n+- Modifies the API response format in src/api/index.ts to include priority\n+- All tests pass and verification is complete.\n+\n+Should I auto-merge this or get review first?"
+  }
+}
